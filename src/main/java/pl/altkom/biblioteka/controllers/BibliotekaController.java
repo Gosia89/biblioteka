@@ -20,7 +20,7 @@ public class BibliotekaController {
 	@Autowired
 	private BibliotekaDao bd;
 
-	@RequestMapping(value = "/biblioteka", method = RequestMethod.GET)
+	@RequestMapping(value = "/katalog", method = RequestMethod.GET)
 	public String biblioteka(Locale locale, Model model, HttpServletRequest request) {
 		boolean zmiana = false;
 		int id = 0;
@@ -49,36 +49,35 @@ public class BibliotekaController {
 			}
 		}
 
-		// md.addTowar(new Towar(0,"Buty","Letnie",200.0,30,"Obuwie"));
-		model.addAttribute("biblioteka", bd.getAllSortedKsiazka(atrybut, wyrazenie));
+		model.addAttribute("katalog", bd.getAllSortedKsiazka(atrybut, wyrazenie));
 		model.addAttribute(new Ksiazka());
                 //System.out.println("asdfasdf");
-		return "biblioteka";
+		return "katalog";
 	}
 
-	@RequestMapping(value = "/biblioteka", method = RequestMethod.POST)
+	@RequestMapping(value = "/katalog", method = RequestMethod.POST)
 	public String bibliotekaDodaj(Locale locale, @ModelAttribute Ksiazka ksiazka,
 			Model model) {
 
 		bd.addKsiazka(ksiazka);
-		model.addAttribute("biblioteka", bd.getAllSortedKsiazka(0, ""));
+		model.addAttribute("katalog", bd.getAllSortedKsiazka(0, ""));
 		model.addAttribute(new Ksiazka());
-		return "biblioteka";
+		return "katalog";
 	}
 
-	@RequestMapping(value = "/bibliotekazmien", method = RequestMethod.GET)
+	@RequestMapping(value = "/katalogzmien", method = RequestMethod.GET)
 	public String bibliotekaDodaj(HttpServletRequest request, Model model) {
 		int id = Integer.parseInt(request.getParameter("id"));
 		model.addAttribute(bd.getKsiazka(id));
-		return "bibliotekazmien";
+		return "katalogzmien";
 	}
 
-	@RequestMapping(value = "/bibliotekazmien", method = RequestMethod.POST)
+	@RequestMapping(value = "/katalogzmien", method = RequestMethod.POST)
 	public String bibliotekaDodaj(@ModelAttribute Ksiazka ksiazka, Model model) {
 		bd.updateKsiazka(ksiazka);
 		model.addAttribute(new Ksiazka());
-		model.addAttribute("biblioteka", bd.getAllSortedKsiazka(0, ""));
+		model.addAttribute("katalog", bd.getAllSortedKsiazka(0, ""));
 		model.addAttribute(new Ksiazka());
-		return "biblioteka";
+		return "katalog";
 	}
 }

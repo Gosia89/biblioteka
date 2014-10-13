@@ -9,7 +9,7 @@
 
         <link href="&{pageContext.request.contextPath}/resources/style.css" 
               rel="stylesheet" type="text/css" />
-        <title>Biblioteka</title>
+        <title>Katalog</title>
         <style>
             header {
                 background-color:black;
@@ -82,18 +82,18 @@
 
     <body>
         <header>
-            <h1>Biblioteka</h1>
+            <h1>Katalog</h1>
         </header>
 
 
         <!-- Tutaj powstaje formularz -->
 
         <div>
-            <h3>Dodawanie ksi??ki do biblioteki</h3>
+            <h3>Dodawanie ksi&#261&#380ki do katalogu</h3>
             <form:form modelAttribute="ksiazka">
 
                 <table id="t01">
-                    <tr><td>Tytu?:</td> 
+                    <tr><td>Tytu&#322:</td> 
                         <td><form:input path="tytul" /></td>
                     </tr>
                     <tr><td>Opis:</td> 
@@ -109,7 +109,7 @@
                         <td><form:input path="kategoria" /></td></tr>
                 </table>
             </div>
-            <input type="submit" value="Dodaj" formaction="biblioteka"
+            <input type="submit" value="Dodaj" formaction="katalog"
                    formmethod="post" />
 
         </form:form>
@@ -119,10 +119,10 @@
 
         <div class="center">
             <h3>Filtruj wg:</h3>
-            <form action="biblioteka" method="get">
+            <form action="katalog" method="get">
                 <select name="kategoria">
-                    <option value="1" >Tytu?</option>
-                    <option value="2" >Opis</option>
+                    <option value="1" >Tytu&#322</option>
+                    <option value="3" >Autorzy</option>
                     <option value="5" >Kategoria</option>
                 </select><br>
                 <input type="text" value=".*" name="wyrazenie" ><br> 
@@ -137,17 +137,17 @@
         <table id="t02">
             <!-- Nag?ówki tabeli ksi??ek-->
             <tr>
-                <th><a href="biblioteka?sort=0" class="a2a">Id</a></th>
-                <th><a href="biblioteka?sort=1" class="a2a">Nazwa</a></th>
-                <th><a href="biblioteka?sort=2" class="a2a">Opis</a></th>
-                <th><a href="biblioteka?sort=3" class="a2a">Cena</a></th>
-                <th><a href="biblioteka?sort=4" class="a2a">Ilo&#347&#263</a></th>
-                <th><a href="biblioteka?sort=5" class="a2a">Kategoria</a></th>
+                <th><a href="katalog?sort=0" class="a2a">Id</a></th>
+                <th><a href="katalog?sort=1" class="a2a">Tytu&#322</a></th>
+                <th><a href="katalog?sort=2" class="a2a">Opis</a></th>
+                <th><a href="katalog?sort=3" class="a2a">Autorzy</a></th>
+                <th><a href="katalog?sort=4" class="a2a">Ilo&#347&#263</a></th>
+                <th><a href="katalog?sort=5" class="a2a">Kategoria</a></th>
                 <th>Usu&#324</th>
                 <th>Zmie&#324</th>
             </tr>
             <!-- z bazy danych wyci?ga do tabeli zapisane ksi??ki-->
-            <c:forEach var="ksiazka" items="${biblioteka1}">
+            <c:forEach var="ksiazka" items="${katalog}">
                 <tr class="a02">
                     <td><c:out value="${ksiazka.id+1}" /></td>
                     <td><c:out value="${ksiazka.tytul}" /></td>
@@ -155,8 +155,8 @@
                     <td><c:out value="${ksiazka.autorzy}" /></td>
                     <td><c:out value="${ksiazka.ilosc}" /></td>
                     <td><c:out value="${ksiazka.kategoria}" /></td>
-                    <td><a href="biblioteka?id=${ksiazka.id}&action=delete" class="a2b" >Usu&#324;</a></td>
-                    <td><a href="bibliotekazmien?id=${ksiazka.id}&action=update" class="a2b">Zmie&#324;</a>
+                    <td><a href="katalog?id=${ksiazka.id}&action=delete" class="a2b">Usu&#324;</a></td>
+                    <td><a href="katalogzmien?id=${ksiazka.id}&action=update" class="a2b">Zmie&#324;</a>
                     </td>
                 </tr>
             </c:forEach>

@@ -2,7 +2,7 @@
 <%@ page session="false" %>
 <html>
 <head>
-	<title>Home</title>
+	<title>Biblioteka</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
    
         <style>
@@ -33,11 +33,11 @@ button:active {
 </head>
 <body>
     <div align="center">
-        <h1>Wejście do biblioteki</h1>
+        <h1>Zapoznaj się z katalogiem naszej biblioteki</h1>
 
 <P>  Czas na serwerze: ${serverTime}. </P>
 		
-<button><a href="<c:url value="/biblioteka" />" >Biblioteka</a></button>
+<button><a href="<c:url value="/katalog" />" >Katalog</a></button>
 
     </div>
 </body>

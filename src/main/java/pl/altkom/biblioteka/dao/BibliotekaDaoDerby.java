@@ -73,15 +73,19 @@ public class BibliotekaDaoDerby implements BibliotekaDao {
 		String sql = "select * FROM ksiazka";
 		List<Ksiazka> ksiazki = jdbcTemplate.query(sql, new KsiazkaMapper());
 		List<Ksiazka> kmp = new ArrayList();
+                
 		if (atrybut != 0) {
 			if (atrybut == 1)
 				for (int i = 0; i < ksiazki.size(); i++)
 					if (ksiazki.get(i).getTytul().matches(s))
 						kmp.add(ksiazki.get(i));
-			if (atrybut == 2)
+                        
+                        
+			if (atrybut == 3)
 				for (int i = 0; i < ksiazki.size(); i++)
-					if (ksiazki.get(i).getOpis().matches(s))
+					if (ksiazki.get(i).getAutorzy().matches(s))
 						kmp.add(ksiazki.get(i));
+                        
 			if (atrybut == 5)
 				for (int i = 0; i < ksiazki.size(); i++)
 					if (ksiazki.get(i).getKategoria().matches(s))
@@ -90,7 +94,7 @@ public class BibliotekaDaoDerby implements BibliotekaDao {
 		}
 
 		if (sort == 1)
-			Collections.sort(ksiazki, new ComparatorByAutorzy());
+			Collections.sort(ksiazki, new ComparatorByTytul());
 		if (sort == 3)
 			Collections.sort(ksiazki, new ComparatorByAutorzy());
 		if (sort == 5)
@@ -98,5 +102,6 @@ public class BibliotekaDaoDerby implements BibliotekaDao {
 
 		return ksiazki;
 	}
+
 
 }

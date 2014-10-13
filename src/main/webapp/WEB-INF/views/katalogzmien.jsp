@@ -3,18 +3,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Insert title here</title>
+<title>Edycja rekordu</title>
 </head>
 <body>
 
 	<form:form modelAttribute="ksiazka">
-		Nazwa: <form:input path="nazwa" />
+		Nazwa: <form:input path="tytul" />
 		<br>
 		Opis: <form:input path="opis" />
 		<br>
-				Cena: <form:input path="cena" />
+				Autorzy: <form:input path="autorzy" />
 		<br>
-				Ilosc: <form:input path="ilosc" />
+				Ilo??: <form:input path="ilosc" />
 		<br>
 				Kategoria: <form:input path="kategoria" />
 		<br>
