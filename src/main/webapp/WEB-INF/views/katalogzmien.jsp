@@ -8,7 +8,7 @@
 <body>
 
 	<form:form modelAttribute="ksiazka">
-		Nazwa: <form:input path="tytul" />
+		Tytu?: <form:input path="tytul" />
 		<br>
 		Opis: <form:input path="opis" />
 		<br>

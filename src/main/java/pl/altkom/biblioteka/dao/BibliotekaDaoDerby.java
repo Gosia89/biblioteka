@@ -43,6 +43,7 @@ public class BibliotekaDaoDerby implements BibliotekaDao {
 			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}
+                System.out.println("addKsiazka");
 
 	}
 
@@ -51,22 +52,29 @@ public class BibliotekaDaoDerby implements BibliotekaDao {
 		String SQL = "update ksiazka set tytul = ?,  opis = ?, autorzy = ?, ilosc = ?, kategoria = ? where id = ?";
 		jdbcTemplate.update(SQL, k.getTytul(), k.getOpis(), k.getAutorzy(),
 				k.getIlosc(), k.getKategoria(), k.getId());
+                System.out.println("updateKsiazka");
 		return;
-	}
+	}   
 
 	@Override
 	public Ksiazka getKsiazka(long id) {
 		String SQL = "select * from ksiazka where id = ?";
+                
+                
 		Ksiazka ksiazka = jdbcTemplate.queryForObject(SQL, new Object[] { id },
 				new KsiazkaMapper());
+                System.out.println("getKsiazka");
 		return ksiazka;
 	}
 
 	@Override
 	public void removeKsiazka(long id) {
+//            String SQL = "update ksiazka set ilosc = ilosc - 1 where id = ?";
+//		jdbcTemplate.update(SQL, id);
 		String SQL = "delete from ksiazka where id = ?";
 		jdbcTemplate.update(SQL, id);
 	}
+        
 
 	@Override
 	public List<Ksiazka> getAllSortedKsiazka(int atrybut, String s) {
@@ -99,9 +107,11 @@ public class BibliotekaDaoDerby implements BibliotekaDao {
 			Collections.sort(ksiazki, new ComparatorByAutorzy());
 		if (sort == 5)
 			Collections.sort(ksiazki, new ComparatorByKat());
-
+                System.out.println("getAllSortedKsiazka");
 		return ksiazki;
 	}
+
+    
 
 
 }

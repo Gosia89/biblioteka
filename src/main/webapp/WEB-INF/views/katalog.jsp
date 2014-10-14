@@ -16,24 +16,26 @@
                 color:white;
                 text-align:center;
                 padding:5px;
+                border-top-left-radius: 1em;
+                border-top-right-radius: 1em;
             }
             .center {
                 position: absolute;
-                right: 700px;
-                top: 98px;
-                width: 200px;
-                background-color: pink;
+                right: 400px;
+                top: 363px;
+                background-color: yellowgreen;
             }
 
             div   {
                 width: 300px;
                 padding: 10px;
                 margin: 0;  
-                background-color: yellow;
+                background-color: lightsalmon;
             }
             table {
                 width:100%;
                 border-collapse: collapse;
+                border-radius: 15px;
             }
             th, td {
                 padding: 5px;
@@ -94,25 +96,43 @@
 
                 <table id="t01">
                     <tr><td>Tytu&#322:</td> 
-                        <td><form:input path="tytul" /></td>
+                        <td><form:input path="tytul"/></td>
+                    <tr><td></td>
+                        <td><form:errors path="tytul" cssStyle="color: #ff0000;"/></td>
+                    </tr>
                     </tr>
                     <tr><td>Opis:</td> 
-                        <td><form:input path="opis" /></td>
+                        <td><form:input path="opis"/></td>
+                    </tr>
+                    <tr><td></td>
+                        <td><form:errors path="opis" cssStyle="color: #ff0000;"/></td>
                     </tr>
                     <tr><td>Autorzy:</td> 
-                        <td><form:input path="autorzy" /></td>
+                        <td><form:input path="autorzy"/></td>
+                    </tr>
+                    <tr><td></td>
+                        <td><form:errors path="autorzy" cssStyle="color: #ff0000;"/></td>
                     </tr>
                     <tr><td>Ilo&#347&#263:</td> 
-                        <td><form:input path="ilosc" /></td>
+                        <td><form:input path="ilosc" type="number"/></td>
+                    </tr>
+                    <tr><td></td>
+                        <td><form:errors path="ilosc" cssStyle="color: #ff0000;"/></td>
                     </tr>
                     <tr><td>Kategoria:</td> 
-                        <td><form:input path="kategoria" /></td></tr>
+                        <td><form:input path="kategoria"/></td></tr>
+                    <tr><td></td>
+                        <td><form:errors path="kategoria" cssStyle="color: #ff0000;"/></td>
+                    </tr>
+                    <tr><td><input type="submit" value="Dodaj" formaction="katalog"
+                   formmethod="post"/>
+                        </td></tr>
                 </table>
-            </div>
-            <input type="submit" value="Dodaj" formaction="katalog"
-                   formmethod="post" />
-
+           
+            
         </form:form>
+        </div>
+        <br>
 
 
         <!-- Tutaj s? wybrane kategorie filtrowania -->
@@ -120,14 +140,18 @@
         <div class="center">
             <h3>Filtruj wg:</h3>
             <form action="katalog" method="get">
-                <select name="kategoria">
+                <table id="t01">
+                    <tr><td><select name="kategoria">
                     <option value="1" >Tytu&#322</option>
                     <option value="3" >Autorzy</option>
                     <option value="5" >Kategoria</option>
-                </select><br>
-                <input type="text" value=".*" name="wyrazenie" ><br> 
-                <input type="submit" name="filter" value="Filtruj" >
-
+                            </select></td></tr>
+                    <tr><td><input type="text" value=".*" name="wyrazenie">
+                        </td></tr>
+                    <tr><td><input type="submit" name="filter" value="Filtruj">
+                        </td></td>
+                </table>
+                
             </form>
         </div>
 
@@ -135,6 +159,7 @@
 
         <!-- Tutaj dodawane sa nowe ksi??ki -->
         <table id="t02">
+            
             <!-- Nag?ówki tabeli ksi??ek-->
             <tr>
                 <th><a href="katalog?sort=0" class="a2a">Id</a></th>
