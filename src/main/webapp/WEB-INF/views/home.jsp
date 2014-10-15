@@ -30,6 +30,8 @@ button:active {
 }
 </style>
 
+<link rel="icon" href="<c:url value="/resources/favicon.ico" />" type="image/x-icon">
+
 </head>
 <body>
     <div align="center">
@@ -38,7 +40,7 @@ button:active {
 <P>  Czas na serwerze: ${serverTime}. </P>
 		
 <button><a href="<c:url value="/katalog" />" >Katalog</a></button>
-
+<a href="<c:url value="/katalog" />" >Katalog</a>
     </div>
 </body>
 </html>

@@ -16,26 +16,56 @@
                 color:white;
                 text-align:center;
                 padding:5px;
-                border-top-left-radius: 1em;
-                border-top-right-radius: 1em;
-            }
-            .center {
-                position: absolute;
-                right: 400px;
-                top: 363px;
-                background-color: yellowgreen;
+                border-top-left-radius: 2em;
+                border-top-right-radius: 2em;
             }
 
-            div   {
-                width: 300px;
-                padding: 10px;
-                margin: 0;  
+            #left {
+                line-height:15px;
+                /*background-color:black;*/
+                /*background-image: url('small1.png');*/
+                height:100%;
+                width:300px;
+                float:left;
+                padding-left:10px;
                 background-color: lightsalmon;
             }
-            table {
-                width:100%;
+            #right {
+                width:0px;
+                float:left;
+                padding-left:10px;
+                padding-top:0px
+            }
+            
+/*                margin: 0;  
+                background-color: lightsalmon;
+                width: 24%;
+                float: left;
+                padding-left: 10px;
+                height: 100%;
+            }*/
+            
+/*            section {
+                width:800px;
+                float:left;
+                padding:10px;
+                background-color: lightcoral;
+            }*/
+/*            #right {
+                float: left;
+                padding-left: 10px;
+                height: 100%;
+                width: 74%;
+            }*/
+            table.ta {
+                width:300px;
                 border-collapse: collapse;
-                border-radius: 15px;
+                margin-left: 0px;
+            }
+            table.tb {
+                width:944px;
+                border-collapse: collapse;
+                margin-left: 0px;
             }
             th, td {
                 padding: 5px;
@@ -78,6 +108,9 @@
             .a2b:active  {color:red; background-color:transparent}
             
         </style>
+        
+<!--        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">-->
+<link rel="icon" href="<c:url value="/resources/favicon.ico" />" type="image/x-icon">
 
     </head>
 
@@ -86,15 +119,15 @@
         <header>
             <h1>Katalog</h1>
         </header>
-
-
+        
+        <br>
         <!-- Tutaj powstaje formularz -->
-
-        <div>
+        
+        <div id="left">
             <h3>Dodawanie ksi&#261&#380ki do katalogu</h3>
             <form:form modelAttribute="ksiazka">
 
-                <table id="t01">
+                <table id="t01" class="ta">
                     <tr><td>Tytu&#322:</td> 
                         <td><form:input path="tytul"/></td>
                     <tr><td></td>
@@ -102,28 +135,45 @@
                     </tr>
                     </tr>
                     <tr><td>Opis:</td> 
-                        <td><form:input path="opis"/></td>
+                        <td><form:input path="opis" /></td>
                     </tr>
                     <tr><td></td>
-                        <td><form:errors path="opis" cssStyle="color: #ff0000;"/></td>
+                        <td><form:errors path="opis" cssStyle="color: #ff0000;" /></td>
                     </tr>
                     <tr><td>Autorzy:</td> 
                         <td><form:input path="autorzy"/></td>
                     </tr>
                     <tr><td></td>
-                        <td><form:errors path="autorzy" cssStyle="color: #ff0000;"/></td>
+                        <td><form:errors path="autorzy" cssStyle="color: #ff0000;" /></td>
                     </tr>
                     <tr><td>Ilo&#347&#263:</td> 
-                        <td><form:input path="ilosc" type="number"/></td>
+                        <td><form:input path="ilosc" type="number" /></td>
                     </tr>
                     <tr><td></td>
-                        <td><form:errors path="ilosc" cssStyle="color: #ff0000;"/></td>
+                        
                     </tr>
-                    <tr><td>Kategoria:</td> 
-                        <td><form:input path="kategoria"/></td></tr>
+<!--                    <tr><td>Kategoria:</td> -->
+<!--                        <td><form:input path="kategoria"/></td></tr>
+                    <tr>-->
+            <td><label for="kategoria">Kategoria:</label></td> 
+            <td>
+                <select id="kategoria" name="kategoria">
+                    <option value="Biografia">Biografia</option>
+                    <option value="Fantastyka">Fantastyka</option>
+                    <option value="Historyczna">Historyczna</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Literatura popularnonaukowa">Literatura popularnonaukowa</option>
+                    <option value="Literatura dzieci&#281ca">Literatura dzieci&#281ca</option>
+                    <option value="Klasyka">Klasyka</option>
+                    <option value="Poezja">Poezja</option>
+                    <option value="Przygodowa">Przygodowa</option>
+                    <option value="Romans">Romans</option>
+                    <option value="Satyra">Satyra</option>
+                    <option value="Sensacja">Sensacja</option>
+                    <option value="Thriller">Thriller</option>
+                </select>
+            </td>
                     <tr><td></td>
-                        <td><form:errors path="kategoria" cssStyle="color: #ff0000;"/></td>
-                    </tr>
                     <tr><td><input type="submit" value="Dodaj" formaction="katalog"
                    formmethod="post"/>
                         </td></tr>
@@ -131,13 +181,11 @@
            
             
         </form:form>
-        </div>
-        <br>
+      
 
 
         <!-- Tutaj s? wybrane kategorie filtrowania -->
 
-        <div class="center">
             <h3>Filtruj wg:</h3>
             <form action="katalog" method="get">
                 <table id="t01">
@@ -153,12 +201,13 @@
                 </table>
                 
             </form>
-        </div>
+            </div>
 
 
 
         <!-- Tutaj dodawane sa nowe ksi??ki -->
-        <table id="t02">
+        <div id="right">
+        <table id="t02" class="tb">
             
             <!-- Nag?ówki tabeli ksi??ek-->
             <tr>
@@ -186,6 +235,6 @@
                 </tr>
             </c:forEach>
         </table>
-
+        </div>
     </body>
 </html>

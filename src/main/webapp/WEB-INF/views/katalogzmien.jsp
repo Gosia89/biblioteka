@@ -3,7 +3,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
 <title>Edycja rekordu</title>
+
+<link rel="icon" href="<c:url value="/resources/favicon.ico" />" type="image/x-icon">
 </head>
 <body>
 
