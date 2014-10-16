@@ -146,15 +146,13 @@
                     <tr><td></td>
                         <td><form:errors path="autorzy" cssStyle="color: #ff0000;" /></td>
                     </tr>
-                    <tr><td>Ilo&#347&#263:</td> 
+                    <tr><td>Liczba:</td> 
                         <td><form:input path="ilosc" type="number" /></td>
                     </tr>
                     <tr><td></td>
-                        
+                        <td><form:errors path="ilosc" cssStyle="color: #ff0000;" /></td>
                     </tr>
-<!--                    <tr><td>Kategoria:</td> -->
-<!--                        <td><form:input path="kategoria"/></td></tr>
-                    <tr>-->
+                  
             <td><label for="kategoria">Kategoria:</label></td> 
             <td>
                 <select id="kategoria" name="kategoria">
@@ -167,6 +165,7 @@
                     <option value="Klasyka">Klasyka</option>
                     <option value="Poezja">Poezja</option>
                     <option value="Przygodowa">Przygodowa</option>
+                    <option value="Religia">Religia</option>
                     <option value="Romans">Romans</option>
                     <option value="Satyra">Satyra</option>
                     <option value="Sensacja">Sensacja</option>
