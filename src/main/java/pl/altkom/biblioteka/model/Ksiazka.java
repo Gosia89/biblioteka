@@ -9,6 +9,7 @@ import org.hibernate.validator.constraints.Range;
 public class Ksiazka implements Serializable, Comparable {
 
     private long id;
+    public final String regex = "[a-zA-ZżźćńółęąśŻŹĆĄŚĘŁÓŃ]+[\\\\.]?[\\\\\\-]?[\\\\\\s]?[a-zA-ZżźćńółęąśŻŹĆĄŚĘŁÓŃ]+[\\\\.]?[\\\\\\-]?[\\\\\\s]?[a-zA-ZżźćńółęąśŻŹĆĄŚĘŁÓŃ]+";
     
     @NotEmpty(message="Pole jest wymagane")
     private String tytul;
@@ -16,12 +17,11 @@ public class Ksiazka implements Serializable, Comparable {
     @NotEmpty(message="Pole jest wymagane")
     private String opis;
     
+    @Pattern(regexp=regex, message="Musisz użyć min. 1 litery, możesz użyć kropki, myślnika i spacji")
     @NotEmpty(message="Pole jest wymagane")
-    @Pattern(regexp="[a-zA-ZżźćńółęąśŻŹĆĄŚĘŁÓŃ\\\\.\\\\\\-\\\\\\s]*", 
-            message="Pole nie może zawierać znaków specjalnych")
     private String autorzy;
     
-    @Range(min=0, max=99, message="Liczba książek musi zawierać się między 1 a 99")
+    @Range(min=0, max=99, message="Liczba książek musi zawierać się między 0 a 99")
     private int ilosc;
     
     @NotEmpty(message="Pole jest wymagane")
