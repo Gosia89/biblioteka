@@ -6,116 +6,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-
-        <link href="&{pageContext.request.contextPath}/resources/style.css" 
-              rel="stylesheet" type="text/css" />
         <title>Katalog</title>
-        <style>
-            header {
-                background-color:black;
-                color:white;
-                text-align:center;
-                padding:5px;
-                border-top-left-radius: 2em;
-                border-top-right-radius: 2em;
-            }
-
-            #left {
-                line-height:15px;
-                /*background-color:black;*/
-                /*background-image: url('small1.png');*/
-                height:100%;
-                width:300px;
-                float:left;
-                padding-left:10px;
-                background-color: lightsalmon;
-            }
-            #right {
-                width:0px;
-                float:left;
-                padding-left:10px;
-                padding-top:0px
-            }
-            
-/*                margin: 0;  
-                background-color: lightsalmon;
-                width: 24%;
-                float: left;
-                padding-left: 10px;
-                height: 100%;
-            }*/
-            
-/*            section {
-                width:800px;
-                float:left;
-                padding:10px;
-                background-color: lightcoral;
-            }*/
-/*            #right {
-                float: left;
-                padding-left: 10px;
-                height: 100%;
-                width: 74%;
-            }*/
-            table.ta {
-                width:300px;
-                border-collapse: collapse;
-                margin-left: 0px;
-            }
-            table.tb {
-                width:944px;
-                border-collapse: collapse;
-                margin-left: 0px;
-            }
-            th, td {
-                padding: 5px;
-                text-align: left;
-            }
-            table#t02 tr:nth-child(even) {
-                background-color: #eee;
-                border: 1px solid black;
-                border-collapse: collapse;
-            }
-            table#t02 tr:nth-child(odd) {
-                background-color:#fff;
-                border: 1px solid black;
-                border-collapse: collapse;
-            }
-            table#t02 th	{
-                color: beige;
-                background-color: black;
-                border: 1px solid black;
-                border-collapse: collapse;
-                text-align: center;
-            }
-            table#t02 td	{
-                border: 1px solid black;
-                border-collapse: collapse;
-            }
-
-            body {background-color:lightgrey}
-            h1   {color:blue; font:arial}
-            p    {color:green}
-            
-            .a2a:link    {color:beige; background-color:transparent}
-            .a2a:visited {color:beige; background-color:transparent}
-            .a2a:hover   {color:green; background-color:transparent}
-            .a2a:active  {color:red; background-color:transparent}
-            
-            .a2b:link    {color:black; background-color:transparent}
-            .a2b:visited {color:black; background-color:transparent}
-            .a2b:hover   {color:green; background-color:transparent}
-            .a2b:active  {color:red; background-color:transparent}
-            
-        </style>
-        
-<!--        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">-->
-<link rel="icon" href="<c:url value="/resources/favicon.ico" />" type="image/x-icon">
-
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href="<c:url value="/resources/styl-katalog.css" />" rel="stylesheet" type="text/css" />
+        <link rel="icon" href="<c:url value="/resources/favicon.ico" />" type="image/x-icon">
     </head>
 
 
     <body>
+        <div id="content">
         <header>
             <h1>Katalog</h1>
         </header>
@@ -140,11 +39,23 @@
                     <tr><td></td>
                         <td><form:errors path="opis" cssStyle="color: #ff0000;" /></td>
                     </tr>
-                    <tr><td>Autorzy:</td> 
-                        <td><form:input path="autorzy"/></td>
+                    <tr><td>Imi&#281:</td> 
+                        <td><form:input path="imieA"/></td>
                     </tr>
                     <tr><td></td>
-                        <td><form:errors path="autorzy" cssStyle="color: #ff0000;" /></td>
+                        <td><form:errors path="imieA" cssStyle="color: #ff0000;" /></td>
+                    </tr>
+                    <tr><td>Nazwisko:</td> 
+                        <td><form:input path="nazwiskoA"/></td>
+                    </tr>
+                    <tr><td></td>
+                        <td><form:errors path="nazwiskoA" cssStyle="color: #ff0000;" /></td>
+                    </tr>
+                    <tr><td>Kraj:</td> 
+                        <td><form:input path="krajA"/></td>
+                    </tr>
+                    <tr><td></td>
+                        <td><form:errors path="krajA" cssStyle="color: #ff0000;" /></td>
                     </tr>
                     <tr><td>Liczba:</td> 
                         <td><form:input path="ilosc" type="number" /></td>
@@ -190,7 +101,7 @@
                 <table id="t01">
                     <tr><td><select name="kategoria">
                     <option value="1" >Tytu&#322</option>
-                    <option value="3" >Autorzy</option>
+                    <option value="4" >Nazwisko autora</option>
                     <option value="5" >Kategoria</option>
                             </select></td></tr>
                     <tr><td><input type="text" value=".*" name="wyrazenie">
@@ -210,12 +121,25 @@
             
             <!-- Nag?ówki tabeli ksi??ek-->
             <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th id="" colspan="3">Autor</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                
+            </tr>
+            <tr>
                 <th><a href="katalog?sort=0" class="a2a">Id</a></th>
                 <th><a href="katalog?sort=1" class="a2a">Tytu&#322</a></th>
                 <th><a href="katalog?sort=2" class="a2a">Opis</a></th>
-                <th><a href="katalog?sort=3" class="a2a">Autorzy</a></th>
-                <th><a href="katalog?sort=4" class="a2a">Ilo&#347&#263</a></th>
-                <th><a href="katalog?sort=5" class="a2a">Kategoria</a></th>
+                <th><a href="katalog?sort=3" class="a2a">Imi&#281</a></th>
+                <th><a href="katalog?sort=4" class="a2a">Nazwisko</a></th>
+                <th><a href="katalog?sort=5" class="a2a">Kraj pochodzenia</a></th>
+                <th><a href="katalog?sort=6" class="a2a">Ilo&#347&#263</a></th>
+                <th><a href="katalog?sort=7" class="a2a">Kategoria</a></th>
                 <th>Usu&#324</th>
                 <th>Zmie&#324</th>
             </tr>
@@ -225,7 +149,9 @@
                     <td><c:out value="${ksiazka.id+1}" /></td>
                     <td><c:out value="${ksiazka.tytul}" /></td>
                     <td><c:out value="${ksiazka.opis}" /></td>
-                    <td><c:out value="${ksiazka.autorzy}" /></td>
+                    <td><c:out value="${ksiazka.imieA}" /></td>
+                    <td><c:out value="${ksiazka.nazwiskoA}" /></td>
+                    <td><c:out value="${ksiazka.krajA}" /></td>
                     <td><c:out value="${ksiazka.ilosc}" /></td>
                     <td><c:out value="${ksiazka.kategoria}" /></td>
                     <td><a href="katalog?id=${ksiazka.id}&action=delete" class="a2b">Usu&#324;</a></td>
@@ -234,6 +160,7 @@
                 </tr>
             </c:forEach>
         </table>
+        </div>
         </div>
     </body>
 </html>

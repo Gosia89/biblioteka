@@ -17,9 +17,13 @@ public class Ksiazka implements Serializable, Comparable {
     @NotEmpty(message="Pole jest wymagane")
     private String opis;
     
+    private String imieA;
+    
     @Pattern(regexp=regex, message="Musisz użyć min. 1 litery, możesz użyć kropki, myślnika i spacji")
     @NotEmpty(message="Pole jest wymagane")
-    private String autorzy;
+    private String nazwiskoA;
+    
+    private String krajA;
     
     @Range(min=0, max=99, message="Liczba książek musi zawierać się między 0 a 99")
     private int ilosc;
@@ -28,15 +32,19 @@ public class Ksiazka implements Serializable, Comparable {
     @Pattern(regexp="[a-zA-Z]+", message="Pole nie może zawierać cyfr")
     private String kategoria;
 
-    public Ksiazka(long id, String tytul, String opis, String autorzy, int ilosc,
-            String kategoria) {
+    public Ksiazka(long id, String tytul, String opis, String imieA, String nazwiskoA, String krajA, 
+            int ilosc, String kategoria) {
         this.id = id;
         this.tytul = tytul;
         this.opis = opis;
-        this.autorzy = autorzy;
+        this.imieA = imieA;
+        this.nazwiskoA = nazwiskoA;
+        this.krajA = krajA;
         this.ilosc = ilosc;
         this.kategoria = kategoria;
     }
+
+    
 
     public Ksiazka() {
     }
@@ -65,14 +73,30 @@ public class Ksiazka implements Serializable, Comparable {
         this.opis = opis;
     }
 
-    public String getAutorzy() {
-        return autorzy;
+    public String getImieA() {
+        return imieA;
     }
 
-    public void setAutorzy(String autorzy) {
-        this.autorzy = autorzy;
+    public void setImieA(String imieA) {
+        this.imieA = imieA;
     }
-
+    
+    public String getNazwiskoA() {
+        return nazwiskoA;
+    }
+    
+    public void setNazwiskoA(String nazwiskoA) {
+        this.nazwiskoA = nazwiskoA;
+    }
+    
+    public String getKrajA() {
+        return krajA;
+    }
+    
+    public void setKrajA(String krajA) {
+        this.krajA = krajA;
+    }
+    
     public int getIlosc() {
         return ilosc;
     }

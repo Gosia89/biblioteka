@@ -10,7 +10,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import pl.altkom.biblioteka.dao.BibliotekaDao;
 
-import pl.altkom.biblioteka.model.ComparatorByAutorzy;
+import pl.altkom.biblioteka.model.ComparatorByNazwiskoA;
 import pl.altkom.biblioteka.model.ComparatorByKat;
 import pl.altkom.biblioteka.model.ComparatorByTytul;
 import pl.altkom.biblioteka.model.Ksiazka;
@@ -32,13 +32,14 @@ public class BibliotekaDaoDerby implements BibliotekaDao {
 		
 
 		try {
-			String sql = "INSERT INTO ksiazka(tytul,opis,autorzy,ilosc,kategoria) values(?,?,?,?,?)";
+			String sql = "INSERT INTO ksiazka(tytul,opis,imieA,nazwiskoA,krajA,ilosc,kategoria) values(?,?,?,?,?,?,?)";
 			// String sql1 =
 			// "select id FROM ksiazka order by id desc FETCH FIRST ROW ONLY;";
 
 			// jdbcTemplate.execute(sql1);
-			jdbcTemplate.update(sql, new Object[] { k.getTytul(), k.getOpis(),
-					k.getAutorzy(), k.getIlosc(), k.getKategoria() });
+			jdbcTemplate.update(sql, new Object[] { k.getTytul(), k.getOpis(), k.getImieA(), 
+                            k.getNazwiskoA(), k.getKrajA(), k.getIlosc(), k.getKategoria() });
+                        
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 			e.printStackTrace();
@@ -49,9 +50,9 @@ public class BibliotekaDaoDerby implements BibliotekaDao {
 
 	@Override
 	public void updateKsiazka(Ksiazka k) {
-		String SQL = "update ksiazka set tytul = ?,  opis = ?, autorzy = ?, ilosc = ?, kategoria = ? where id = ?";
-		jdbcTemplate.update(SQL, k.getTytul(), k.getOpis(), k.getAutorzy(),
-				k.getIlosc(), k.getKategoria(), k.getId());
+		String SQL = "update ksiazka set tytul = ?,  opis = ?, imieA = ?, nazwiskoA = ?, krajA = ?, ilosc = ?, kategoria = ? where id = ?";
+		jdbcTemplate.update(SQL, k.getTytul(), k.getOpis(), k.getImieA(), k.getNazwiskoA(),
+                                    k.getKrajA(), k.getIlosc(), k.getKategoria(), k.getId());
                 System.out.println("updateKsiazka");
 		return;
 	}   
@@ -89,12 +90,12 @@ public class BibliotekaDaoDerby implements BibliotekaDao {
 						kmp.add(ksiazki.get(i));
                         
                         
-			if (atrybut == 3)
+			if (atrybut == 4)
 				for (int i = 0; i < ksiazki.size(); i++)
-					if (ksiazki.get(i).getAutorzy().matches(s))
+					if (ksiazki.get(i).getNazwiskoA().matches(s))
 						kmp.add(ksiazki.get(i));
                         
-			if (atrybut == 5)
+			if (atrybut == 7)
 				for (int i = 0; i < ksiazki.size(); i++)
 					if (ksiazki.get(i).getKategoria().matches(s))
 						kmp.add(ksiazki.get(i));
@@ -103,9 +104,9 @@ public class BibliotekaDaoDerby implements BibliotekaDao {
 
 		if (sort == 1)
 			Collections.sort(ksiazki, new ComparatorByTytul());
-		if (sort == 3)
-			Collections.sort(ksiazki, new ComparatorByAutorzy());
-		if (sort == 5)
+		if (sort == 4)
+			Collections.sort(ksiazki, new ComparatorByNazwiskoA());
+		if (sort == 7)
 			Collections.sort(ksiazki, new ComparatorByKat());
                 System.out.println("getAllSortedKsiazka");
 		return ksiazki;

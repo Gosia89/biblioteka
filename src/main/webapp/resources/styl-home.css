@@ -1,0 +1,104 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2014-10-18, 18:42:26
+    Author     : M
+*/
+
+button {
+    background-color:#5478E4;
+    -moz-border-radius:20px;
+    -webkit-border-radius:20px;
+    border-radius:20px;
+    border:3px solid #6787E7;
+    display:inline-block;
+    cursor:pointer;
+    color:red;
+    font-family:verdana;
+    font-size:20px;
+    padding:11px 31px;
+    text-decoration:none;
+    text-shadow:0px 0px 0px #2f6627;
+}
+button:hover {
+    background-color:#5cbf2a;
+}
+button:active {
+    position:relative;
+    top:1px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#content {
+    width: 100%;
+    height: 100%;
+    background-image:url('biblioteka1.jpg');
+}  
+
+h1 {
+    font-family: Monotype Corsiva;
+    color: #E6B800;
+    font-size: 100px;
+}
+
+.nav {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.nav .pull-right {
+    float: right!important;
+}
+.nav .pull-left {
+    float: left!important;
+}
+.nav a {
+    color: #5a5a5a;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 15px;
+    text-transform: uppercase;
+}
+.nav li {
+    display: inline;
+}
+
+.jumbotron {
+    background-image:url('resources.jpg');
+    height: 500px;
+    margin-top: 40px;
+    -webkit-box-shadow: 10px 10px 29px 6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 29px 6px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 29px 6px rgba(0,0,0,0.75);
+}
+.container-jumbotron {
+    position: relative;
+    top:100px;
+}
+.container-jumbotron h1 {
+    color: lightgoldenrodyellow;
+    font-size: 48px;
+    font-family: Vivaldi;
+    font-weight: bold;
+}
+.container-jumbotron a {
+    margin-left: 70px;
+    color: #d6de58;
+    text-align: left!important;
+    font-size: 20px;
+}
+.time{
+    background-color:#BFAA81;
+    border-bottom:1px solid #dbdbdb;
+}
+.time h4 {
+    color:#393c3d;
+    font-size:22px;
+    text-align: right;
+}
