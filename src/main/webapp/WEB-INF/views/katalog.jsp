@@ -146,7 +146,7 @@
             <!-- z bazy danych wyci?ga do tabeli zapisane ksi??ki-->
             <c:forEach var="ksiazka" items="${katalog}">
                 <tr class="a02">
-                    <td><c:out value="${ksiazka.id+1}" /></td>
+                    <td style="width:50%"><c:out value="${ksiazka.id+1}" /></td>
                     <td><c:out value="${ksiazka.tytul}" /></td>
                     <td><c:out value="${ksiazka.opis}" /></td>
                     <td><c:out value="${ksiazka.imieA}" /></td>

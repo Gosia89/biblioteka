@@ -1,4 +1,4 @@
-ï»¿<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
 <html>
 <head>
@@ -9,16 +9,16 @@
 
 </head>
 <body>
-    <div id="content">
+    <!--<div id="content">-->
     <div class="nav">
-        <h1>Biblioteka dla dzieci</h1>
+        <center><h1>Biblioteka dla dzieci</h1></center>
 
-<P>  Czas na serwerze: ${serverTime}. </P>
+        <P>  Czas na serwerze: ${serverTime}. </P>
 		
-<button><a href="<c:url value="/katalog" />" >Katalog</a></button>
-<a href="<c:url value="/katalog" />" >Katalog</a>
+        <button><a href="<c:url value="/katalog" />" >Katalog</a></button>
+        <a href="<c:url value="/katalog" />" >Katalog</a>
     </div>
-    </div>
+    <!--</div>-->
 
 </body>
 </html>

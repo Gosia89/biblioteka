@@ -24,13 +24,13 @@ header {
                 height:100%;
                 width:25%;
                 float:left;
-                padding-left:10px;
+                padding-left:0px;
                 background-color: lightsalmon;
             }
             #right {
-                width:65%;
+                width:73%;
                 float:left;
-                padding-left:10px;
+                padding-left:2%;
                 padding-top:0px
             }
             
@@ -44,10 +44,19 @@ header {
                 border-collapse: collapse;
                 margin-left: 0px;
             }
-            th, td {
+            
+            table.tb th, table.tb td {
+                padding: 5px;
+                text-align: left;
+                background-color: pink;
+                /*width: 10%;*/
+            }
+            
+            table.ta th, table.ta td {
                 padding: 5px;
                 text-align: left;
             }
+            
             table#t02 tr:nth-child(even) {
                 background-color: #eee;
                 border: 1px solid black;
