@@ -8,28 +8,37 @@ and open the template in the editor.
     Author     : M
 */
 
-button {
-    background-color:#5478E4;
-    -moz-border-radius:20px;
-    -webkit-border-radius:20px;
-    border-radius:20px;
-    border:3px solid #6787E7;
-    display:inline-block;
-    cursor:pointer;
-    color:red;
-    font-family:verdana;
-    font-size:20px;
-    padding:11px 31px;
-    text-decoration:none;
-    text-shadow:0px 0px 0px #2f6627;
-}
-button:hover {
-    background-color:#5cbf2a;
-}
-button:active {
-    position:relative;
-    top:1px;
-}
+.button {
+   border-top: 1px solid #939596;
+   background: #505c63;
+   background: -webkit-gradient(linear, left top, left bottom, from(#3d4347), to(#505c63));
+   background: -webkit-linear-gradient(top, #3d4347, #505c63);
+   background: -moz-linear-gradient(top, #3d4347, #505c63);
+   background: -ms-linear-gradient(top, #3d4347, #505c63);
+   background: -o-linear-gradient(top, #3d4347, #505c63);
+   padding: 4.5px 9px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 14px;
+   font-family: Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-top-color: #121517;
+   background: #121517;
+   color: #e0e3b6;
+   }
+.button:active {
+   border-top-color: #2a3136;
+   background: #2a3136;
+   }
 
 body {
     width: 100%;
@@ -41,32 +50,37 @@ body {
     background-size: 100% 100%;
 }
 
-#content {
+/*#content {
     width: 100%;
     height: 100%;
-}  
+}  */
 
 h1 {
-    font-family: Monotype Corsiva, cursive;
-    color: #E6B800;
-    font-size: 4vw;
+    font-family: Monotype Corsiva, cursive, Comic Sans, fantasy;
+    color: #D1AE1F;
+    font-size: 4.5vw;
+    margin: 1vw 1vw 1vw 1vw;
+}
+
+p {
+    font-family: Monotype Corsiva, Comic Sans, fantasy;
+    color: #C9A81E;//#D1AE1F;
+    font-size: 2vw;
     margin: 1vw 1vw 1vw 1vw;
 }
 
 .nav {
-    background-color: rgba(33, 33, 33, 0.7);//#333333;
+    background-color: rgba(33, 33, 33, 0.85);//#333333;
     -moz-border-radius:20px;
     -webkit-border-radius:20px;
     border-radius:20px;
-    border:3px solid #6787E7;
+    border:2.5px solid #AD9B92;//#AEAF93;//#4B92A6;//#262626;//#6787E7;
     /*opacity: 0.7;*/
-    margin-left: 25%;
+    margin-left: 27.5%;
     margin-top: 25px;
-    
-    width: 50%;
+    width: 45%;
     height: 50%;
     /*padding: 0px 0px 0px 0px;*/
-    
     position: relative;
     display: inline-block;
 }

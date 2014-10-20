@@ -14,6 +14,8 @@
 
 
     <body>
+    <center>
+        
         <div id="content">
         <header>
             <h1>Katalog</h1>
@@ -39,17 +41,11 @@
                     <tr><td></td>
                         <td><form:errors path="opis" cssStyle="color: #ff0000;" /></td>
                     </tr>
-                    <tr><td>Imi&#281:</td> 
-                        <td><form:input path="imieA"/></td>
+                    <tr><td>Autor:</td> 
+                        <td><form:input path="autor"/></td>
                     </tr>
                     <tr><td></td>
-                        <td><form:errors path="imieA" cssStyle="color: #ff0000;" /></td>
-                    </tr>
-                    <tr><td>Nazwisko:</td> 
-                        <td><form:input path="nazwiskoA"/></td>
-                    </tr>
-                    <tr><td></td>
-                        <td><form:errors path="nazwiskoA" cssStyle="color: #ff0000;" /></td>
+                        <td><form:errors path="autor" cssStyle="color: #ff0000;" /></td>
                     </tr>
                     <tr><td>Kraj:</td> 
                         <td><form:input path="krajA"/></td>
@@ -96,12 +92,12 @@
 
         <!-- Tutaj s? wybrane kategorie filtrowania -->
 
-            <h3>Filtruj wg:</h3>
+        <h3>Filtruj wg:</h3>
             <form action="katalog" method="get">
-                <table id="t01">
+                <table id="t01" class="ta">
                     <tr><td><select name="kategoria">
                     <option value="1" >Tytu&#322</option>
-                    <option value="4" >Nazwisko autora</option>
+                    <option value="3" >Autor</option>
                     <option value="5" >Kategoria</option>
                             </select></td></tr>
                     <tr><td><input type="text" value=".*" name="wyrazenie">
@@ -109,8 +105,8 @@
                     <tr><td><input type="submit" name="filter" value="Filtruj">
                         </td></td>
                 </table>
-                
             </form>
+        <a href="<c:url value="/home" />" >Strona glowna</a>
             </div>
 
 
@@ -120,47 +116,36 @@
         <table id="t02" class="tb">
             
             <!-- Nag?ówki tabeli ksi??ek-->
-            <tr>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th id="" colspan="3">Autor</th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                
-            </tr>
+
             <tr>
                 <th><a href="katalog?sort=0" class="a2a">Id</a></th>
                 <th><a href="katalog?sort=1" class="a2a">Tytu&#322</a></th>
                 <th><a href="katalog?sort=2" class="a2a">Opis</a></th>
-                <th><a href="katalog?sort=3" class="a2a">Imi&#281</a></th>
-                <th><a href="katalog?sort=4" class="a2a">Nazwisko</a></th>
-                <th><a href="katalog?sort=5" class="a2a">Kraj pochodzenia</a></th>
-                <th><a href="katalog?sort=6" class="a2a">Ilo&#347&#263</a></th>
-                <th><a href="katalog?sort=7" class="a2a">Kategoria</a></th>
+                <th><a href="katalog?sort=3" class="a2a">Autor</a></th>
+                <th><a href="katalog?sort=4" class="a2a">Kraj pochodzenia</a></th>
+                <th><a href="katalog?sort=5" class="a2a">Ilo&#347&#263</a></th>
+                <th><a href="katalog?sort=6" class="a2a">Kategoria</a></th>
                 <th>Usu&#324</th>
-                <th>Zmie&#324</th>
+                <th>Edytuj</th>
             </tr>
             <!-- z bazy danych wyci?ga do tabeli zapisane ksi??ki-->
             <c:forEach var="ksiazka" items="${katalog}">
                 <tr class="a02">
-                    <td style="width:50%"><c:out value="${ksiazka.id+1}" /></td>
+                    <td><c:out value="${ksiazka.id+1}" /></td>
                     <td><c:out value="${ksiazka.tytul}" /></td>
                     <td><c:out value="${ksiazka.opis}" /></td>
-                    <td><c:out value="${ksiazka.imieA}" /></td>
-                    <td><c:out value="${ksiazka.nazwiskoA}" /></td>
+                    <td><c:out value="${ksiazka.autor}" /></td>
                     <td><c:out value="${ksiazka.krajA}" /></td>
                     <td><c:out value="${ksiazka.ilosc}" /></td>
                     <td><c:out value="${ksiazka.kategoria}" /></td>
                     <td><a href="katalog?id=${ksiazka.id}&action=delete" class="a2b">Usu&#324;</a></td>
-                    <td><a href="katalogzmien?id=${ksiazka.id}&action=update" class="a2b">Zmie&#324;</a>
+                    <td><a href="katalogzmien?id=${ksiazka.id}&action=update" class="a2b">Edytuj</a>
                     </td>
                 </tr>
             </c:forEach>
         </table>
         </div>
         </div>
+    </center>
     </body>
 </html>

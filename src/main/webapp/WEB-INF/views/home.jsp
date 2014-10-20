@@ -12,10 +12,21 @@
     <!--<div id="content">-->
     <div class="nav">
         <center><h1>Biblioteka dla dzieci</h1></center>
-
-        <P>  Czas na serwerze: ${serverTime}. </P>
+       
+        <center><p>MBP nr 200<br> 
+                ul. Grunwaldzka 23<br>
+                50-123 Wroc&#322aw<br>
+                tel. (71) 328-23-23<br><br>
+            </p></center>
+        
+        
+        <P>${serverTime}</P>
 		
-        <button><a href="<c:url value="/katalog" />" >Katalog</a></button>
+        <FORM>
+            <INPUT class="button" Type="button" VALUE="Katalog" 
+                   ONCLICK="window.location.href='<c:url value="/katalog" />'"> 
+        </FORM>
+<button><a href="<c:url value="/katalog" />" >Katalog</a></button>
         <a href="<c:url value="/katalog" />" >Katalog</a>
     </div>
     <!--</div>-->

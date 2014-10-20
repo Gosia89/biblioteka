@@ -17,11 +17,9 @@ public class Ksiazka implements Serializable, Comparable {
     @NotEmpty(message="Pole jest wymagane")
     private String opis;
     
-    private String imieA;
-    
     @Pattern(regexp=regex, message="Musisz użyć min. 1 litery, możesz użyć kropki, myślnika i spacji")
     @NotEmpty(message="Pole jest wymagane")
-    private String nazwiskoA;
+    private String autor;
     
     private String krajA;
     
@@ -32,13 +30,12 @@ public class Ksiazka implements Serializable, Comparable {
     @Pattern(regexp="[a-zA-Z]+", message="Pole nie może zawierać cyfr")
     private String kategoria;
 
-    public Ksiazka(long id, String tytul, String opis, String imieA, String nazwiskoA, String krajA, 
+    public Ksiazka(long id, String tytul, String opis, String autor, String krajA, 
             int ilosc, String kategoria) {
         this.id = id;
         this.tytul = tytul;
         this.opis = opis;
-        this.imieA = imieA;
-        this.nazwiskoA = nazwiskoA;
+        this.autor = autor;
         this.krajA = krajA;
         this.ilosc = ilosc;
         this.kategoria = kategoria;
@@ -72,21 +69,13 @@ public class Ksiazka implements Serializable, Comparable {
     public void setOpis(String opis) {
         this.opis = opis;
     }
-
-    public String getImieA() {
-        return imieA;
-    }
-
-    public void setImieA(String imieA) {
-        this.imieA = imieA;
+    
+    public String getAutor() {
+        return autor;
     }
     
-    public String getNazwiskoA() {
-        return nazwiskoA;
-    }
-    
-    public void setNazwiskoA(String nazwiskoA) {
-        this.nazwiskoA = nazwiskoA;
+    public void setAutor(String autor) {
+        this.autor = autor;
     }
     
     public String getKrajA() {

@@ -28,8 +28,7 @@ CREATE TABLE ksiazka (
   id INTEGER NOT NULL GENERATED ALWAYS AS IDENTITY (START WITH 0, INCREMENT BY 1),
   tytul        VARCHAR(255),
   opis    	  VARCHAR(255),
-  imieA	  VARCHAR(255),
-  nazwiskoA   VARCHAR(255),
+  autor   VARCHAR(255),
   krajA       VARCHAR(255),
   ilosc       INT,
   kategoria   VARCHAR(255)

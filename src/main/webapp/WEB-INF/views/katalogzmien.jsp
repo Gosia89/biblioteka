@@ -24,17 +24,11 @@
                         <tr><td></td>
                             <td><form:errors path="opis" cssStyle="color: #ff0000;"/></td>
                         </tr>
-                        <tr><td>Imi&#281:</td> 
-                            <td><form:input path="imieA"/></td>
+                        <tr><td>Autor:</td> 
+                            <td><form:input path="autor"/></td>
                         </tr>
                         <tr><td></td>
-                            <td><form:errors path="imieA" cssStyle="color: #ff0000;" /></td>
-                        </tr>
-                        <tr><td>Nazwisko:</td> 
-                            <td><form:input path="nazwiskoA"/></td>
-                        </tr>
-                        <tr><td></td>
-                            <td><form:errors path="nazwiskoA" cssStyle="color: #ff0000;" /></td>
+                            <td><form:errors path="autor" cssStyle="color: #ff0000;" /></td>
                         </tr>
                         <tr><td>Kraj:</td> 
                             <td><form:input path="krajA"/></td>
@@ -76,6 +70,8 @@
                         <form:hidden path="id"/>
                     </form:form>
                 </table>
+                <a href="<c:url value="/katalog" />" >Katalog</a>
+                <a href="<c:url value="/home" />" >Strona g?ówna</a>
             </div>
         </div>
     </body>

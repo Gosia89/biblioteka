@@ -1,9 +1,13 @@
 package pl.altkom.biblioteka.controllers;
 
+import java.text.DateFormat;
+import java.util.Date;
 import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,6 +16,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import pl.altkom.biblioteka.HomeController;
 
 import pl.altkom.biblioteka.dao.BibliotekaDao;
 import pl.altkom.biblioteka.model.Ksiazka;
@@ -92,5 +97,19 @@ public class BibliotekaController {
         model.addAttribute("katalog", bd.getAllSortedKsiazka(0, ""));
         model.addAttribute(new Ksiazka());
         return "katalog";
+    }
+    
+    @RequestMapping(value = "/home", method = RequestMethod.GET)
+    public String home(HttpServletRequest request, Model model) {
+                
+        
+        Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG);
+		
+		String formattedDate = dateFormat.format(date);
+		
+		model.addAttribute("serverTime", formattedDate );
+
+        return "home";
     }
 }
