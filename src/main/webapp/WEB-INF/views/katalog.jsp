@@ -90,7 +90,7 @@
       
 
 
-        <!-- Tutaj s? wybrane kategorie filtrowania -->
+         <!--Tutaj s? wybrane kategorie filtrowania--> 
 
         <h3>Filtruj wg:</h3>
             <form action="katalog" method="get">
@@ -115,7 +115,7 @@
         <div id="right">
         <table id="t02" class="tb">
             
-            <!-- Nag?ówki tabeli ksi??ek-->
+             <!--Nag?ówki tabeli ksi??ek-->
 
             <tr>
                 <th><a href="katalog?sort=0" class="a2a">Id</a></th>
@@ -128,7 +128,7 @@
                 <th>Usu&#324</th>
                 <th>Edytuj</th>
             </tr>
-            <!-- z bazy danych wyci?ga do tabeli zapisane ksi??ki-->
+             <!--z bazy danych wyci?ga do tabeli zapisane ksi??ki-->
             <c:forEach var="ksiazka" items="${katalog}">
                 <tr class="a02">
                     <td><c:out value="${ksiazka.id+1}" /></td>
