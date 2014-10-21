@@ -8,39 +8,41 @@
         <link rel="icon" href="<c:url value="/resources/favicon.ico" />" type="image/x-icon">
     </head>
     <body>
-        <div id="content">
+    <center>
+<!--        <div id="content">-->
             <div id="left">
+                <h4>Edycja rekordu</h4>
                 <table id="t01" class="ta">
                     <form:form modelAttribute="ksiazka">
                         <tr><td>Tytu&#322:</td>
                             <td><form:input path="tytul" /></td>
                         </tr>
                         <tr><td></td>
-                            <td><form:errors path="tytul" cssStyle="color: #ff0000;"/></td>
+                            <td><form:errors path="tytul" cssStyle="color: #3d8ecc;"/></td>
                         </tr>
                         <tr><td>Opis:</td>
                             <td><form:input path="opis" /></td>
                         </tr>
                         <tr><td></td>
-                            <td><form:errors path="opis" cssStyle="color: #ff0000;"/></td>
+                            <td><form:errors path="opis" cssStyle="color: #3d8ecc;"/></td>
                         </tr>
                         <tr><td>Autor:</td> 
                             <td><form:input path="autor"/></td>
                         </tr>
                         <tr><td></td>
-                            <td><form:errors path="autor" cssStyle="color: #ff0000;" /></td>
+                            <td><form:errors path="autor" cssStyle="color: #3d8ecc;" /></td>
                         </tr>
                         <tr><td>Kraj:</td> 
                             <td><form:input path="krajA"/></td>
                         </tr>
                         <tr><td></td>
-                            <td><form:errors path="krajA" cssStyle="color: #ff0000;" /></td>
+                            <td><form:errors path="krajA" cssStyle="color: #3d8ecc;" /></td>
                         </tr>
                         <tr><td>Liczba:</td>
                             <td><form:input path="ilosc" type="number" /></td>
                         </tr>
                         <tr><td></td>
-                            <td><form:errors path="ilosc" cssStyle="color: #ff0000;"/></td>
+                            <td><form:errors path="ilosc" cssStyle="color: #3d8ecc;"/></td>
                         </tr>
                         <td><label for="kategoria">Kategoria:</label></td> 
                         <td>
@@ -63,16 +65,20 @@
                         </td>
                         </tr>
                         <tr><td></td>
-                            <td><form:errors path="kategoria" cssStyle="color: #ff0000;"/></td>
+                            <td><form:errors path="kategoria" cssStyle="color: #3d8ecc;"/></td>
                         </tr>
-                        <tr><td><input type="submit" value="Zmie&#324;" /></td>
-                        </tr>
+                        <tr><td>
+                                <form>
+                                    <INPUT class="button" type="submit" value="Zmie&#324;" />
+                                </form>
+                            </td></tr>
                         <form:hidden path="id"/>
                     </form:form>
                 </table>
                 <a href="<c:url value="/katalog" />" >Katalog</a>
                 <a href="<c:url value="/home" />" >Strona g?ówna</a>
             </div>
-        </div>
+<!--        </div>-->
+    </center>
     </body>
 </html>

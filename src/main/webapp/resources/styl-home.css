@@ -29,6 +29,8 @@ and open the template in the editor.
    font-family: Helvetica, Arial, Sans-Serif;
    text-decoration: none;
    vertical-align: middle;
+   margin-top: 15px;
+   margin-bottom: 15px;
    }
 .button:hover {
    border-top-color: #121517;
@@ -58,15 +60,29 @@ body {
 h1 {
     font-family: Monotype Corsiva, cursive, Comic Sans, fantasy;
     color: #D1AE1F;
-    font-size: 4.5vw;
-    margin: 1vw 1vw 1vw 1vw;
+    font-size: 55px;
+    margin: 15px 15px 15px 15px;
 }
 
 p {
     font-family: Monotype Corsiva, Comic Sans, fantasy;
     color: #C9A81E;//#D1AE1F;
-    font-size: 2vw;
-    margin: 1vw 1vw 1vw 1vw;
+    font-size: 28px;
+    margin: 10px 10px 15px 10px;
+}
+
+/*h4 {
+    font-family: Times New Roman, cursive;
+    color: #C9A81E;//#D1AE1F;
+    //margin: 1vw 1vw 1vw 1vw;
+}*/
+
+time {
+    font-family: Times New Roman, cursive;
+    color: #AD9B92;//#D1AE1F;
+    float: right;
+    margin: 40px 10px 10px 10px;
+    font-size: 17px;
 }
 
 .nav {
@@ -75,62 +91,10 @@ p {
     -webkit-border-radius:20px;
     border-radius:20px;
     border:2.5px solid #AD9B92;//#AEAF93;//#4B92A6;//#262626;//#6787E7;
-    /*opacity: 0.7;*/
-    margin-left: 27.5%;
     margin-top: 25px;
-    width: 45%;
-    height: 50%;
+    width: 550px;
+    height: 400px;
     /*padding: 0px 0px 0px 0px;*/
-    position: relative;
+    //position: relative;
     display: inline-block;
-}
-.nav .pull-right {
-    float: right!important;
-}
-.nav .pull-left {
-    float: left!important;
-}
-.nav a {
-    color: #5a5a5a;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 10px 15px;
-    text-transform: uppercase;
-}
-.nav li {
-    display: inline;
-}
-
-.jumbotron {
-    background-image:url('resources.jpg');
-    height: 500px;
-    margin-top: 40px;
-    -webkit-box-shadow: 10px 10px 29px 6px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 29px 6px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 29px 6px rgba(0,0,0,0.75);
-}
-.container-jumbotron {
-    position: relative;
-    top:100px;
-}
-.container-jumbotron h1 {
-    color: lightgoldenrodyellow;
-    font-size: 48px;
-    font-family: Vivaldi;
-    font-weight: bold;
-}
-.container-jumbotron a {
-    margin-left: 70px;
-    color: #d6de58;
-    text-align: left!important;
-    font-size: 20px;
-}
-.time{
-    background-color:#BFAA81;
-    border-bottom:1px solid #dbdbdb;
-}
-.time h4 {
-    color:#393c3d;
-    font-size:22px;
-    text-align: right;
 }

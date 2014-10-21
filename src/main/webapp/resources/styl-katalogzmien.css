@@ -7,84 +7,65 @@ and open the template in the editor.
     Created on : 2014-10-18, 18:37:53
     Author     : M
 */
-header {
-                background-color:black;
-                color:white;
-                text-align:center;
-                padding:5px;
-                border-top-left-radius: 2em;
-                border-top-right-radius: 2em;
+   body {
+                width: 100%;
+                height: 100%;
+                margin: 0px 0px 0px 0px;
+                padding: 0px 0px 0px 0px;                        
+                background: url('papier3.jpg') no-repeat center center fixed;
+                -webkit-background-size: 100% 100%;
+                -moz-background-size: 100% 100%;
+                -o-background-size: 100% 100%;
+                background-size: 100% 100%;
             }
-
+            
+/*            #content {
+               alignment-adjust: middle;
+               alignment-baseline: middle;
+               width: 960px;
+               //height:97%;
+               //padding: 1.5% 2.5% 1.5% 2.5%;
+               margin: 25px 0 0 0;
+               //position: relative;
+               display: inline-block;
+            }*/
+            
             #left {
                 line-height:15px;
-                /*background-color:black;*/
-                /*background-image: url('small1.png');*/
-                height:100%;
-                width:25%;
-                float:left;
-                padding-left:10px;
-                background-color: lightsalmon;
-            }
-            #right {
-                width:65%;
-                float:left;
-                padding-left:10px;
-                padding-top:0px
+                height:600px;
+                width:320px;
+                margin-top: 50px;
+                padding: 0px 0px 0px 0px;
+                background-color: rgba(232, 212, 132, 0.963);
+                border-bottom-left-radius: 1.5em;
+                border-bottom-right-radius: 1.5em;
+                border-top-right-radius: 1.5em;
+                display: inline-block;
             }
             
             table.ta {
-                width:300px;
+                width:240px;
                 border-collapse: collapse;
                 margin-left: 0px;
+                font-family: Georgia;
             }
-            table.tb {
-                width:border-box;
-                border-collapse: collapse;
-                margin-left: 0px;
-            }
-            th, td {
-                padding: 5px;
+            
+            table.ta th, table.ta td {
+                padding: 4px;
                 text-align: left;
-            }
-            table#t02 tr:nth-child(even) {
-                background-color: #eee;
-                border: 1px solid black;
-                border-collapse: collapse;
-            }
-            table#t02 tr:nth-child(odd) {
-                background-color:#fff;
-                border: 1px solid black;
-                border-collapse: collapse;
-            }
-            table#t02 th	{
-                color: beige;
-                background-color: black;
-                border: 1px solid black;
-                border-collapse: collapse;
-                text-align: center;
-            }
-            table#t02 td	{
-                border: 1px solid black;
-                border-collapse: collapse;
-            }
-
-            body {
-                width: 100%;
-                height: 100%;
-                background-color:lightgrey;
-                margin: 0 auto;
+                padding-left: 0px;
+                font-size: 15px;
+                font-family: Georgia;
             }
             
-            #content {
-               alignment-adjust: middle;
-               alignment-baseline: middle;
-               width: 95%;
-               height:90%;
-            }
+             .moje {text-align: left}
             
-            h1   {color:blue; font:arial}
-            p    {color:green}
+            h1   {color:linen; font:Georgia}
+            h4   {font-family:  Georgia}
+            
+            select {width: 170px; font-size: 13px; font-family: Arial, Verdana }
+            input[type="text"] {width: 170px; font-size: 13px; font-family: Arial, Verdana}
+            input[type="number"] {width: 170px; font-size: 13px; font-family: Arial, Verdana}
             
             .a2a:link    {color:beige; background-color:transparent}
             .a2a:visited {color:beige; background-color:transparent}
@@ -93,5 +74,37 @@ header {
             
             .a2b:link    {color:black; background-color:transparent}
             .a2b:visited {color:black; background-color:transparent}
-            .a2b:hover   {color:green; background-color:transparent}
-            .a2b:active  {color:red; background-color:transparent}
+            .a2b:hover   {color:gray; background-color:transparent}
+            .a2b:active  {color:coral; background-color:transparent}
+
+.button {
+   border-top: 1px solid #41494d;
+   background: #b8b7ad;
+   background: -webkit-gradient(linear, left top, left bottom, from(#e8e4d8), to(#b8b7ad));
+   background: -webkit-linear-gradient(top, #e8e4d8, #b8b7ad);
+   background: -moz-linear-gradient(top, #e8e4d8, #b8b7ad);
+   background: -ms-linear-gradient(top, #e8e4d8, #b8b7ad);
+   background: -o-linear-gradient(top, #e8e4d8, #b8b7ad);
+   padding: 2.5px 5px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #21211f;
+   font-size: 13px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-top-color: #403426;
+   background: #403426;
+   color: #e6e8cf;
+   }
+.button:active {
+   border-top-color: #695938;
+   background: #695938;
+   }

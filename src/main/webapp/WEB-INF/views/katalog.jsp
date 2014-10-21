@@ -32,32 +32,32 @@
                     <tr><td>Tytu&#322:</td> 
                         <td><form:input path="tytul"/></td>
                     <tr><td></td>
-                        <td><form:errors path="tytul" cssStyle="color: #ff0000;"/></td>
+                        <td><form:errors path="tytul" cssStyle="color: #3d8ecc"/></td>
                     </tr>
                     </tr>
                     <tr><td>Opis:</td> 
                         <td><form:input path="opis" /></td>
                     </tr>
                     <tr><td></td>
-                        <td><form:errors path="opis" cssStyle="color: #ff0000;" /></td>
+                        <td><form:errors path="opis" cssStyle="color: #3d8ecc" /></td>
                     </tr>
                     <tr><td>Autor:</td> 
                         <td><form:input path="autor"/></td>
                     </tr>
                     <tr><td></td>
-                        <td><form:errors path="autor" cssStyle="color: #ff0000;" /></td>
+                        <td><form:errors path="autor" cssStyle="color: #3d8ecc" /></td>
                     </tr>
                     <tr><td>Kraj:</td> 
                         <td><form:input path="krajA"/></td>
                     </tr>
                     <tr><td></td>
-                        <td><form:errors path="krajA" cssStyle="color: #ff0000;" /></td>
+                        <td><form:errors path="krajA" cssStyle="color: #3d8ecc" /></td>
                     </tr>
                     <tr><td>Liczba:</td> 
                         <td><form:input path="ilosc" type="number" /></td>
                     </tr>
                     <tr><td></td>
-                        <td><form:errors path="ilosc" cssStyle="color: #ff0000;" /></td>
+                        <td><form:errors path="ilosc" cssStyle="color: #3d8ecc" /></td>
                     </tr>
                   
             <td><label for="kategoria">Kategoria:</label></td> 
@@ -79,10 +79,13 @@
                     <option value="Thriller">Thriller</option>
                 </select>
             </td>
-                    <tr><td></td>
-                    <tr><td><input type="submit" value="Dodaj" formaction="katalog"
-                   formmethod="post"/>
-                        </td></tr>
+            <tr><td></td>
+            <tr><td>
+                    <form>
+                        <INPUT class="button" type="submit" VALUE="Dodaj" formaction="katalog" 
+                               formmethod="post"/>
+                    </form>
+                </td></tr>
                 </table>
            
             
@@ -103,8 +106,12 @@
                             </select></td><td></td></tr>
                     <tr><td><input type="text" value=".*" name="wyrazenie" >
                         </td><td></td></tr>
-                    <tr><td><input type="submit" name="filter" value="Filtruj">
-                        </td><td></td></tr>
+                    <tr><td>
+                            <form>
+                                <INPUT class="button" type="submit" name="filter" VALUE="Filtruj" />
+                            </form>
+                        </td>
+                        <td></td></tr>
                 </table>
             </form>
         <a href="<c:url value="/home" />" >Strona glowna</a>

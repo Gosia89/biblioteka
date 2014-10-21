@@ -19,22 +19,14 @@ header {
             
             #left {
                 line-height:15px;
-                /*background-color:black;*/
-                /*background-image: url('small1.png');*/
                 height:100%;
                 width:240px;
                 float:left;
                 padding: 0px 0px 0px 0px;
-                //background-color: linen;
                 background-color: rgba(232, 212, 132, 0.963);
                 border-bottom-left-radius: 1.5em;
                 border-bottom-right-radius: 1.5em;
                 border-top-right-radius: 1.5em;
-                //background-color: goldenrod;//#FFDA47;//#FFD633;//#FFDB4D;//#FFD633;
-/*                background: -webkit-linear-gradient(lightgoldenrod, goldenrod);  For Safari 5.1 to 6.0 
-                background: -o-linear-gradient(lightgoldenrod, goldenrod);  For Opera 11.1 to 12.0 
-                background: -moz-linear-gradient(lightgoldenrod, goldenrod);  For Firefox 3.6 to 15 
-                background: linear-gradient(#E0C424, #FFEC41);  Standard syntax */
                 display: inline-block;
             }
             
@@ -43,7 +35,6 @@ header {
                 float:left;
                 padding-left:10px;
                 padding-top:0px;
-/*                display: inline-block;*/
             }
 
             table.ta {
@@ -158,3 +149,35 @@ header {
             .a2b:visited {color:black; background-color:transparent}
             .a2b:hover   {color:gray; background-color:transparent}
             .a2b:active  {color:coral; background-color:transparent}
+
+.button {
+   border-top: 1px solid #41494d;
+   background: #b8b7ad;
+   background: -webkit-gradient(linear, left top, left bottom, from(#e8e4d8), to(#b8b7ad));
+   background: -webkit-linear-gradient(top, #e8e4d8, #b8b7ad);
+   background: -moz-linear-gradient(top, #e8e4d8, #b8b7ad);
+   background: -ms-linear-gradient(top, #e8e4d8, #b8b7ad);
+   background: -o-linear-gradient(top, #e8e4d8, #b8b7ad);
+   padding: 2.5px 5px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: #21211f;
+   font-size: 13px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-top-color: #403426;
+   background: #403426;
+   color: #e6e8cf;
+   }
+.button:active {
+   border-top-color: #695938;
+   background: #695938;
+   }

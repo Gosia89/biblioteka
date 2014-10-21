@@ -9,27 +9,27 @@
 
 </head>
 <body>
-    <!--<div id="content">-->
+<center>
     <div class="nav">
         <center><h1>Biblioteka dla dzieci</h1></center>
        
         <center><p>MBP nr 200<br> 
                 ul. Grunwaldzka 23<br>
                 50-123 Wroc&#322aw<br>
-                tel. (71) 328-23-23<br><br>
-            </p></center>
+                tel. (71) 328-23-23</p>
+        </center>
         
-        
-        <P>${serverTime}</P>
-		
-        <FORM>
-            <INPUT class="button" Type="button" VALUE="Katalog" 
+       <center><FORM>
+            <INPUT class="button" Type="button" VALUE="Kliknij, aby wej&#347&#263 do katalogu" 
                    ONCLICK="window.location.href='<c:url value="/katalog" />'"> 
         </FORM>
-<button><a href="<c:url value="/katalog" />" >Katalog</a></button>
-        <a href="<c:url value="/katalog" />" >Katalog</a>
+        </center>
+        
+                
+        <time>${serverTime}</time>
+        
     </div>
-    <!--</div>-->
+</center>
 
 </body>
 </html>
