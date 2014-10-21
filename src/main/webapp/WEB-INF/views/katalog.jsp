@@ -25,7 +25,7 @@
         <!-- Tutaj powstaje formularz -->
         
         <div id="left">
-            <h3>Dodawanie ksi&#261&#380ki do katalogu</h3>
+            <h4>Dodaj ksi&#261&#380k&#281 do katalogu</h4>
             <form:form modelAttribute="ksiazka">
 
                 <table id="t01" class="ta">
@@ -87,12 +87,13 @@
            
             
         </form:form>
-      
+            
+            <br>      
 
 
          <!--Tutaj s? wybrane kategorie filtrowania--> 
 
-        <h3>Filtruj wg:</h3>
+        <h4>Filtruj wed&#322ug:</h4>
             <form action="katalog" method="get">
                 <table id="t01" class="ta">
                     <tr><td><select name="kategoria">
@@ -122,7 +123,7 @@
                 <th><a href="katalog?sort=1" class="a2a">Tytu&#322</a></th>
                 <th><a href="katalog?sort=2" class="a2a">Opis</a></th>
                 <th><a href="katalog?sort=3" class="a2a">Autor</a></th>
-                <th><a href="katalog?sort=4" class="a2a">Kraj pochodzenia</a></th>
+                <th><a href="katalog?sort=4" class="a2a">Kraj</a></th>
                 <th><a href="katalog?sort=5" class="a2a">Ilo&#347&#263</a></th>
                 <th><a href="katalog?sort=6" class="a2a">Kategoria</a></th>
                 <th>Usu&#324</th>

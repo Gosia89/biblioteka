@@ -4,18 +4,17 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : 2014-10-18, 18:31:40
-    Author     : M
+    Created on : 2014-10-21, 10:20:40
+    Author     : kursant9
 */
 
 header {
-                //background-color:#403626;
-                color:white;
                 text-align:center;
                 padding:5px;
                 border-top-left-radius: 2em;
                 border-top-right-radius: 2em;
                 background-color: rgba(64, 54, 38, 0.95);
+                font-family: Georgia, Times New Roman;
             }
             
             #left {
@@ -51,6 +50,7 @@ header {
                 width:300px;
                 border-collapse: collapse;
                 margin-left: 0px;
+                font-family: Georgia;
             }
             table.tb {
                 width: 100%;
@@ -65,12 +65,15 @@ header {
             }
             
             table.ta th, table.ta td {
-                padding: 5px;
+                padding: 4px;
                 text-align: left;
+                padding-left: 10px;
+                font-size: 15px;
+                font-family: Georgia;
             }
             
             table#t02 tr:nth-child(even) {
-                background-color: rgba(245, 233, 198, 0.94);
+                background-color: rgba(245, 237, 206, 0.94);//rgba(237, 229, 194, 0.94);//(237, 230, 199, 0.94);//(245, 233, 198, 0.94);
                 //background-color: #F5E9C6;//#E0C05E;//#FEE093;//#eee;
                 border: 1px solid black;
                 border-collapse: collapse;
@@ -87,18 +90,21 @@ header {
                 border: 1px solid black;
                 border-collapse: collapse;
                 text-align: center;
+                font-size: 15px;
+                font-family: Georgia;
             }
             
             
             table#t02 td	{
                 border: 1px solid black;
                 border-collapse: collapse;
+                font-size: 13px;
+                font-family: Arial;
             }
 
             body {
                 width: 100%;
                 height: 100%;
-                overflow: hidden;
                 margin: 0px 0px 0px 0px;
                 padding: 0px 0px 0px 0px;                        
                 background: url('papier3.jpg') no-repeat center center fixed;
@@ -133,10 +139,13 @@ header {
                display: inline-block;
             }
             
-            h1   {color:linen; font:arial}
-            h3   {text-align: left; padding-left: 20px}
+            h1   {color:linen; font:Georgia}
+            h4   {text-align: left; padding-left: 10px; font-family:  Georgia}
             p    {color:green}
-            select {width: 70%}
+            select {width: 70%; font-size: 13px; font-family: Arial, Verdana}
+            input[type="text"] {width: 125px; font-size: 13px; font-family: Arial, Verdana}
+            input[type="number"] {width: 125px; font-size: 13px; font-family: Arial, Verdana}
+            //select {width: 125px;}
             
             .a2a:link    {color:beige; background-color:transparent}
             .a2a:visited {color:beige; background-color:transparent}
@@ -145,5 +154,5 @@ header {
             
             .a2b:link    {color:black; background-color:transparent}
             .a2b:visited {color:black; background-color:transparent}
-            .a2b:hover   {color:green; background-color:transparent}
-            .a2b:active  {color:red; background-color:transparent}
+            .a2b:hover   {color:gray; background-color:transparent}
+            .a2b:active  {color:coral; background-color:transparent}

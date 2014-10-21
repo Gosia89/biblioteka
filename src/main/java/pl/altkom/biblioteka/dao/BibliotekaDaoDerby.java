@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 import pl.altkom.biblioteka.dao.BibliotekaDao;
 
 import pl.altkom.biblioteka.model.ComparatorByAutor;
+import pl.altkom.biblioteka.model.ComparatorByIlosc;
 import pl.altkom.biblioteka.model.ComparatorByKat;
 import pl.altkom.biblioteka.model.ComparatorByTytul;
 import pl.altkom.biblioteka.model.Ksiazka;
@@ -106,6 +107,8 @@ public class BibliotekaDaoDerby implements BibliotekaDao {
 			Collections.sort(ksiazki, new ComparatorByTytul());
 		if (sort == 3)
 			Collections.sort(ksiazki, new ComparatorByAutor());
+                if (sort == 5)
+			Collections.sort(ksiazki, new ComparatorByIlosc());
 		if (sort == 6)
 			Collections.sort(ksiazki, new ComparatorByKat());
                 System.out.println("getAllSortedKsiazka");
