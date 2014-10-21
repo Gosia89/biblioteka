@@ -47,7 +47,7 @@ header {
             }
 
             table.ta {
-                width:300px;
+                width:240px;
                 border-collapse: collapse;
                 margin-left: 0px;
                 font-family: Georgia;
@@ -139,13 +139,15 @@ header {
                display: inline-block;
             }
             
+            .moje {text-align: left}
+            
             h1   {color:linen; font:Georgia}
             h4   {text-align: left; padding-left: 10px; font-family:  Georgia}
             p    {color:green}
-            select {width: 70%; font-size: 13px; font-family: Arial, Verdana}
+            
+            select {width: 130px; font-size: 13px; font-family: Arial, Verdana }
             input[type="text"] {width: 125px; font-size: 13px; font-family: Arial, Verdana}
             input[type="number"] {width: 125px; font-size: 13px; font-family: Arial, Verdana}
-            //select {width: 125px;}
             
             .a2a:link    {color:beige; background-color:transparent}
             .a2a:visited {color:beige; background-color:transparent}

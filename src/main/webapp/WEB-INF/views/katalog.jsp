@@ -100,11 +100,11 @@
                     <option value="1" >Tytu&#322</option>
                     <option value="3" >Autor</option>
                     <option value="5" >Kategoria</option>
-                            </select></td></tr>
-                    <tr><td><input type="text" value=".*" name="wyrazenie">
-                        </td></tr>
+                            </select></td><td></td></tr>
+                    <tr><td><input type="text" value=".*" name="wyrazenie" >
+                        </td><td></td></tr>
                     <tr><td><input type="submit" name="filter" value="Filtruj">
-                        </td></td>
+                        </td><td></td></tr>
                 </table>
             </form>
         <a href="<c:url value="/home" />" >Strona glowna</a>
