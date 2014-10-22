@@ -13,6 +13,7 @@ import pl.altkom.biblioteka.dao.BibliotekaDao;
 import pl.altkom.biblioteka.model.ComparatorByAutor;
 import pl.altkom.biblioteka.model.ComparatorByIlosc;
 import pl.altkom.biblioteka.model.ComparatorByKat;
+import pl.altkom.biblioteka.model.ComparatorByKraj;
 import pl.altkom.biblioteka.model.ComparatorByTytul;
 import pl.altkom.biblioteka.model.Ksiazka;
 
@@ -90,10 +91,14 @@ public class BibliotekaDaoDerby implements BibliotekaDao {
 					if (ksiazki.get(i).getTytul().matches(s))
 						kmp.add(ksiazki.get(i));
                         
-                        
 			if (atrybut == 3)
 				for (int i = 0; i < ksiazki.size(); i++)
 					if (ksiazki.get(i).getAutor().matches(s))
+						kmp.add(ksiazki.get(i));
+                        
+                        if (atrybut == 4)
+				for (int i = 0; i < ksiazki.size(); i++)
+					if (ksiazki.get(i).getKrajA().matches(s))
 						kmp.add(ksiazki.get(i));
                         
 			if (atrybut == 6)
@@ -107,6 +112,8 @@ public class BibliotekaDaoDerby implements BibliotekaDao {
 			Collections.sort(ksiazki, new ComparatorByTytul());
 		if (sort == 3)
 			Collections.sort(ksiazki, new ComparatorByAutor());
+                if (sort == 4)
+			Collections.sort(ksiazki, new ComparatorByKraj());
                 if (sort == 5)
 			Collections.sort(ksiazki, new ComparatorByIlosc());
 		if (sort == 6)

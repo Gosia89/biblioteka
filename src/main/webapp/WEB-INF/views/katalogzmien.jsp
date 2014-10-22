@@ -18,54 +18,48 @@
                             <td><form:input path="tytul" /></td>
                         </tr>
                         <tr><td></td>
-                            <td><form:errors path="tytul" cssStyle="color: #3d8ecc;"/></td>
+                            <td><form:errors path="tytul" cssStyle="color: #ff3814;"/></td>
                         </tr>
                         <tr><td>Opis:</td>
                             <td><form:input path="opis" /></td>
                         </tr>
                         <tr><td></td>
-                            <td><form:errors path="opis" cssStyle="color: #3d8ecc;"/></td>
+                            <td><form:errors path="opis" cssStyle="color: #ff3814;"/></td>
                         </tr>
                         <tr><td>Autor:</td> 
                             <td><form:input path="autor"/></td>
                         </tr>
                         <tr><td></td>
-                            <td><form:errors path="autor" cssStyle="color: #3d8ecc;" /></td>
+                            <td><form:errors path="autor" cssStyle="color: #ff3814;" /></td>
                         </tr>
                         <tr><td>Kraj:</td> 
                             <td><form:input path="krajA"/></td>
                         </tr>
                         <tr><td></td>
-                            <td><form:errors path="krajA" cssStyle="color: #3d8ecc;" /></td>
+                            <td><form:errors path="krajA" cssStyle="color: #ff3814;" /></td>
                         </tr>
-                        <tr><td>Liczba:</td>
+                        <tr><td>Ilo&#347&#263::</td>
                             <td><form:input path="ilosc" type="number" /></td>
                         </tr>
                         <tr><td></td>
-                            <td><form:errors path="ilosc" cssStyle="color: #3d8ecc;"/></td>
+                            <td><form:errors path="ilosc" cssStyle="color: #ff3814;"/></td>
                         </tr>
                         <td><label for="kategoria">Kategoria:</label></td> 
                         <td>
                             <select id="kategoria" name="kategoria">
-                                <option value="Biografia">Biografia</option>
+                                <option value="Bajki">Bajki</option>
+                                <option value="Czasopisma">Czasopisma</option>
                                 <option value="Fantastyka">Fantastyka</option>
-                                <option value="Historyczna">Historyczna</option>
-                                <option value="Horror">Horror</option>
-                                <option value="Literatura popularnonaukowa">Literatura popularnonaukowa</option>
-                                <option value="Literatura dzieci&#281ca">Literatura dzieci&#281ca</option>
-                                <option value="Klasyka">Klasyka</option>
-                                <option value="Poezja">Poezja</option>
-                                <option value="Przygodowa">Przygodowa</option>
-                                <option value="Religia">Religia</option>
-                                <option value="Romans">Romans</option>
-                                <option value="Satyra">Satyra</option>
-                                <option value="Sensacja">Sensacja</option>
-                                <option value="Thriller">Thriller</option>
+                                <option value="Historyczne">Historyczne</option>
+                                <option value="Lektury">Lektury</option>
+                                <option value="Obyczajowe">Obyczajowe</option>
+                                <option value="Popularnonaukowe">Popularnonaukowe</option>
+                                <option value="Przygodowe">Przygodowe</option>
                             </select>
                         </td>
                         </tr>
                         <tr><td></td>
-                            <td><form:errors path="kategoria" cssStyle="color: #3d8ecc;"/></td>
+                            <td><form:errors path="kategoria" cssStyle="color: tomato;"/></td>
                         </tr>
                         <tr><td>
                                 <form>
@@ -75,8 +69,12 @@
                         <form:hidden path="id"/>
                     </form:form>
                 </table>
-                <a href="<c:url value="/katalog" />" >Katalog</a>
-                <a href="<c:url value="/home" />" >Strona g?ówna</a>
+                <br>
+                <center>
+                    <li><a href="<c:url value="/katalog" />" class="aredir">KATALOG</a></li>
+                        <li><a href="<c:url value="/home" />" class="aredir">STRONA G&#321ÓWNA</a></li>
+                    
+                </center>
             </div>
 <!--        </div>-->
     </center>

@@ -67,15 +67,18 @@ and open the template in the editor.
             input[type="text"] {width: 170px; font-size: 13px; font-family: Arial, Verdana}
             input[type="number"] {width: 170px; font-size: 13px; font-family: Arial, Verdana}
             
-            .a2a:link    {color:beige; background-color:transparent}
-            .a2a:visited {color:beige; background-color:transparent}
-            .a2a:hover   {color:green; background-color:transparent}
-            .a2a:active  {color:red; background-color:transparent}
+            .aredir:link    {color:#403626; background-color:transparent; text-decoration: none;}
+            .aredir:visited {color:#403626; background-color:transparent; text-decoration: none;}
+            .aredir:hover   {color:gray; background-color:transparent; text-decoration: none;}
+            .aredir:active  {color:#4055da; background-color:transparent; text-decoration: none;}
             
-            .a2b:link    {color:black; background-color:transparent}
-            .a2b:visited {color:black; background-color:transparent}
-            .a2b:hover   {color:gray; background-color:transparent}
-            .a2b:active  {color:coral; background-color:transparent}
+             li {
+                font-size: 14px;
+                line-height: 20px;
+                font-family: Georgia, Times New Roman;
+                font-weight: bold;
+                color: #403626;
+            }
 
 .button {
    border-top: 1px solid #41494d;

@@ -30,7 +30,7 @@ and open the template in the editor.
    text-decoration: none;
    vertical-align: middle;
    margin-top: 15px;
-   margin-bottom: 15px;
+   margin-bottom: 35px;
    }
 .button:hover {
    border-top-color: #121517;
@@ -51,11 +51,6 @@ body {
     background-image:url('biblioteka1.jpg');
     background-size: 100% 100%;
 }
-
-/*#content {
-    width: 100%;
-    height: 100%;
-}  */
 
 h1 {
     font-family: Monotype Corsiva, cursive, Comic Sans, fantasy;
